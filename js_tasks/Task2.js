@@ -1,4 +1,4 @@
-// Function to gather employee data
+
 function gatherEmployeeData() {
     const name = prompt("Enter employee's name:");
     const age = parseInt(prompt("Enter employee's age:"));
@@ -8,7 +8,7 @@ function gatherEmployeeData() {
     return { name, age, yearsOfExperience, selfRating };
 }
 
-// Function to determine job category
+
 function determineJobCategory(yearsOfExperience) {
     if (yearsOfExperience < 2) {
         return "Junior";
@@ -21,7 +21,7 @@ function determineJobCategory(yearsOfExperience) {
     }
 }
 
-// Function to determine performance level
+
 function determinePerformanceLevel(selfRating) {
     switch (true) {
         case selfRating >= 9:
@@ -35,7 +35,7 @@ function determinePerformanceLevel(selfRating) {
     }
 }
 
-// Function to calculate bonus
+
 function calculateBonus(yearsOfExperience, baseSalary) {
     let bonusPercentage;
     if (yearsOfExperience < 3) {
@@ -48,7 +48,6 @@ function calculateBonus(yearsOfExperience, baseSalary) {
     return baseSalary * bonusPercentage;
 }
 
-// Function to determine work shift
 function determineWorkShift() {
     const currentHour = new Date().getHours();
     if (currentHour >= 9 && currentHour < 18) {
@@ -58,7 +57,7 @@ function determineWorkShift() {
     }
 }
 
-// Main function to execute the program
+
 function evaluateEmployee() {
     const baseSalary = 50000; // Example base salary
     const employeeData = gatherEmployeeData();
@@ -87,5 +86,5 @@ function evaluateEmployee() {
     document.getElementById("employeeReport").innerText = result;
 }
 
-// Call the main function to evaluate the employee
+
 evaluateEmployee();
