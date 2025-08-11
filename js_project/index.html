@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h3>Data Submition Form</h3>
+            <div class="input_section">
+                <label for="name">Name :</label>
+                <input type="text" id="name" placeholder="enter your name">
+            </div>
+            <div class="input_section">
+                <label for="name">Descreption :</label>
+                <input type="text" id="description" placeholder="enter The Discreption">
+            </div>
+            <div class="input_section">
+                <label for="selec">select catagory</label>
+                <select name="selec" id="select_box">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <button class="add_botton" type="submit" id="add_ptn">ADD</button>
+        </form>
+
+    </div>
+    <div class="table-show">
+        <table class="data_table" id="data_table" >
+            <thead>
+                <tr>
+                    <th>index</th>
+                    <th>name</th>
+                    <th>Discreption</th>
+                    <th>category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+            
+        </table>
+    </div>
+
+    <div id="editModal" class="modal" style="display:none;">
+        <div class="modal-content">
+        <h3>Edit Item</h3>
+        <label>Name:</label>
+        <input type="text" id="modalName" />
+        <label>Description:</label>
+        <input type="text" id="modalDescription" />
+        <label>Category:</label>
+        <select id="modalCategory">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <button id="modalSaveBtn">Save</button>
+        <button id="modalCancelBtn">Cancel</button>
+        </div>
+    </div>
+
+    <div class="search_bar">
+        <input type="search" id="search_input" placeholder="search here">
+        <button id="search_btn">Search</button>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>

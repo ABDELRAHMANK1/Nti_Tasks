@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array CRUD Operations</title>
+    <link rel="stylesheet" href="newstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Array CRUD Operations</h1>
+        
+        <div class="operations">
+            <div class="operation">
+                <h2>Create Item</h2>
+                <div class="form-group">
+                    <label for="newItem">Item Value:</label>
+                    <input type="text" id="newItem" placeholder="Enter item value">
+                </div>
+                <button id="addBtn">Add Item</button>
+            </div>
+            
+            <div class="operation">
+                <h2>Read Items</h2>
+                <p>All items will be displayed below.</p>
+                <button id="refreshBtn">display List</button>
+            </div>
+            
+            <div class="operation">
+                <h2>Update Item</h2>
+                <div class="form-group">
+                    <label for="updateIndex">Item Index:</label>
+                    <input type="number" id="updateIndex" placeholder="Enter index">
+                </div>
+                <div class="form-group">
+                    <label for="updateValue">New Value:</label>
+                    <input type="text" id="updateValue" placeholder="Enter new value">
+                </div>
+                <button id="updateBtn">Update Item</button>
+            </div>
+            
+            <div class="operation">
+                <h2>Delete Item</h2>
+                <div class="form-group">
+                    <label for="deleteIndex">Item Index:</label>
+                    <input type="number" id="deleteIndex" placeholder="Enter index">
+                </div>
+                <button id="deleteBtn">Delete Item</button>
+            </div>
+        </div>
+        
+        <div class="item-display">
+            <h2>Current Items</h2>
+            <div id="itemsContainer">
+                <ul id="itemsList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="Task5.js"></script>
+</body>
+</html>

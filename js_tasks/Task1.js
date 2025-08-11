@@ -1,6 +1,7 @@
 // ======Task 1======
 
 //1
+/** 
 var name = "abdelrahman ";
 var age = 20;
 var is_man = true;
@@ -40,3 +41,13 @@ function check_login() {
         console.log("Password:", password);
     }
 }
+*/
+console.log();
+
+{
+let name = "kuahdgsf"
+const age  = 20;
+console.log(name);
+}
+console.log(age);
+
