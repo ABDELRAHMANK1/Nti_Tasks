@@ -1,0 +1,53 @@
+
+<div class="container mt-5">
+  <h3 class="mb-4">Data Submission Form</h3>
+  <form (ngSubmit)="addData()" #dataForm="ngForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input id="name" type="text" class="form-control"
+              [(ngModel)]="formData.name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea id="description" class="form-control"
+                [(ngModel)]="formData.description" name="description"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Select Category</label>
+      <select id="category" class="form-select"
+              [(ngModel)]="formData.catagory" name="category" required>
+        <option value="">Choose...</option>
+        <option value="Category A">Category A</option>
+        <option value="Category B">Category B</option>
+        <option value="Category C">Category C</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!dataForm.form.valid">
+      ADD
+    </button>
+  </form>
+
+
+
+  <div class="mt-5" *ngIf="dataList.length > 0">
+    <h4>Submitted Data</h4>
+    <table class="table table-bordered table-striped mt-3">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dataList; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.catagory }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
