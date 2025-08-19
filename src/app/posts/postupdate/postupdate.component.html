@@ -1,0 +1,14 @@
+
+<div class="container mt-5" (ngSubmit)="onSubmit()">
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <div class="mp-3">
+            <label for="title" class="form-label">Title</label>
+            <input id="title" class="form-control" formControlName="title">
+        </div>
+        <div class="mp-3">
+            <label for="body" class="form-label">Body</label>
+            <textarea name="bofr" id="body" cols="30" rows="10" class="form-control" formControlName="body"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="postForm.invalid">Submit</button>
+    </form>
+</div>
